@@ -1,0 +1,17 @@
+.lightning-text {
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 5px red;
+    animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 70.999%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999%, 71% {
+        opacity: 0.5;
+        text-shadow: none;
+    }
+}

@@ -1,0 +1,16 @@
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-label {
+    font-weight: bold;
+    width: 100px; /* Adjust the width as needed */
+    align-items: center;
+    margin: 0.5rem;
+    padding-top: 1.25rem;
+}
+
+.value {
+    margin-left: 0.25rem; /* Adjust the margin as needed */
+}

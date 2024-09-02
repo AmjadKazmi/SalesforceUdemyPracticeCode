@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact from Apex">
+        <div class="slds-grid slds-wrap">
+            <template if:true={responseRecieved}>
+                <template for:each={contacts.data} for:item="contact">
+                    <div key={contact.id} class="slds-col slds-size_1-of-3 slds-var-p-around_small">
+                        <lightning-tile label={contact.LastName}>
+                            <p class="slds-truncate" title={contact.Phone}>{contact.Phone}</p>
+                        </lightning-tile>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <c-child-custom-event-component onmessagecustomevent={eventToHandle} ></c-child-custom-event-component>
+    Message from child using declarative HTML markup
+        <div class="lightning-text">
+             {childMessage}
+        </div>
+        <c-child-custom-event-component></c-child-custom-event-component>
+  
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contact from Apex">
+        <div class="slds-grid slds-gutters slds-wrap" style="margin-left: 2px; margin-top:2px;">
+            <div class="slds-col slds-size_3-of-4">
+                <lightning-input type="number" label="Number of contact records" onchange={inputHandler}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-4 slds-align-bottom">
+                <lightning-button label="Fetch" variant="brand" name="FetchContact" onclick={getContact}></lightning-button>
+            </div>
+        </div>        
+    <div class="slds-grid slds-wrap">
+        <template if:true={responseRecieved}>
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.id} class="slds-col slds-size_1-of-3 slds-var-p-around_small">
+                    <lightning-tile label={contact.LastName}>
+                        <p class="slds-truncate" title={contact.Phone}>{contact.Phone}</p>
+                    </lightning-tile>
+                </div>
+            </template>
+        </template>
+    </div>
+    </lightning-card>
+</template>

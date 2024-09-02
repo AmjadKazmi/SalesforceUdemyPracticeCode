@@ -1,0 +1,40 @@
+<template>
+    <template if:true={show}>
+        <lightning-card title="Employee Information">
+            <div class="slds-var-p-left_small slds-var-p-right_small slds-var-p-bottom_small">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12">
+                        <div class="input-container">
+                            <label class="input-label">Enter Name</label>
+                            <lightning-input data-id="name" value={name} onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item  size="12">
+                        <div class="input-container">
+                            <label class="input-label">Enter Age</label>
+                            <lightning-input data-id="age" value={age} onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item  size="12">
+                        <div class="input-container">
+                            <label class="input-label">Enter Salary</label>
+                            <lightning-input data-id="salary" value={salary} onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="12">
+                        <lightning-button label="Save" onclick={saveButtonHandler}></lightning-button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={show}>
+        <lightning-card title="Employee Details">
+            <div class="slds-var-m-around_medium">
+                <p><span class="input-label">Employee Name:</span><span class="value">{name}</span></p>
+                <p><span class="input-label">Employee Age:</span><span class="value">{age}</span></p>
+                <p><span class="input-label">Employee Salary:</span><span class="value">{salary}</span></p>
+            </div>
+        </lightning-card>
+    </template>
+</template>
